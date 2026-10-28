@@ -1,25 +1,18 @@
-void main() {
+public class Main {
+    public static void main(String[] args) {
+        CarWithLombok car1 = new CarWithLombok(
+                "TT", "Audi", 2020, 230000, "grey", 3
+        );
 
+        CarWithLombok car2 = new CarWithLombok(
+                "RS7", "Audi", 2026, 900000, "red", 2
+        );
 
-    CarWithLombok car1 = new CarWithLombok(
-            "GLE", "Mercedes", 2020, 350000, "white", 5
-    );
+        System.out.println(car1);
+        System.out.println(car2);
 
-    CarWithLombok car2 = new CarWithLombok(
-            "GLC", "Mercedes", 2023, 200000, "silver", 3
-    );
+        System.out.println(car1.getColor());
 
-    IO.println(car1);
-    IO.println(car2);
-
-    IO.println(car1.getColor());
-
-
-    car1.setColor("black");
-
-    IO.println("Are these objects equal? "
-            + car1.equals(car2));
-
-    IO.println("HashCode 1: " + car1.hashCode());
-    IO.println("HashCode 2: " + car2.hashCode());
+        car1.setColor("black");
+    }
 }
